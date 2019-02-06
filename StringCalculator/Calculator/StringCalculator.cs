@@ -7,10 +7,19 @@ using System.Text.RegularExpressions;
 
 namespace Calculator
 {
+    /// <summary>
+    /// Static class, contains method Add
+    /// </summary>
     public static class StringCalculator
     {
-        private static string pattern = @"[,]?";
-        
+        private static string pattern = @"[\D]";
+
+        /// <summary>
+        /// Return sum of numbers in string parameter
+        /// </summary>
+        /// <param name="argument">The string parameter, contains numbers.</param>
+        /// <returns>Return sum of all numbers in parameter </returns>
+        /// <exception cref="System.ArgumentNullException">argument</exception>
         public static int Add(string argument)
         {
             if (argument == null)
